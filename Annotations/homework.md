@@ -70,11 +70,4 @@ print(new Messages())
 ```
 Вывод в консоли:
 
-<span style="color:purple"> \/\/\/ С днём рождения! \/\/\/</span>
-
-<span style="color:yellow">!!! Предупреждение !!!</span>
-
-<span style="color:red">---> Ошибка <---</span>
-
-
-
+![img.png](img/consoeOutput.png)
