@@ -87,16 +87,16 @@ try {
 ```java
 FileWriter fileWriter = null;
 try {
-fileWriter = new FileWriter("text.txt");
-fileWriter.write("Информация");
+    fileWriter = new FileWriter("text.txt");
+    fileWriter.write("Информация");
 } catch (IOException e) {
-System.out.println("Ошибка при работе с файлом");
+    System.out.println("Ошибка при работе с файлом");
 } finally {
-try {
-fileWriter.close();
-} catch (Exception e) {
-System.out.println("Ошибка при закрытии файла");
-}
+    try {
+        fileWriter.close();
+    } catch (Exception e) {
+        System.out.println("Ошибка при закрытии файла");
+    }
 }
 ```
 
@@ -104,9 +104,9 @@ System.out.println("Ошибка при закрытии файла");
 
 ```java
 try (FileWriter fileWriter = new FileWriter("text.txt")) {
-fileWriter.write("Информация");
+    fileWriter.write("Информация");
 } catch (IOException e) {
-System.out.println("Ошибка при работе с файлом");
+    System.out.println("Ошибка при работе с файлом");
 }
 ```
 
@@ -114,10 +114,10 @@ System.out.println("Ошибка при работе с файлом");
 
 ```java
 void writeFile(String str) throws IOException {
-if (str == null) {
-throw new IOException("Строка не должна быть равна null");
-}
-...
+    if (str == null) {
+        throw new IOException("Строка не должна быть равна null");
+    }
+    ...
 }
 ```
 
@@ -140,11 +140,11 @@ _RuntimeException_
 
 ```java
 public class BankOnlineException extends Exception {
-BankOnlineException() {}
+    BankOnlineException() {}
 
-BankOnlineException(String message){
-super(message);
-}
+    BankOnlineException(String message){
+        super(message);
+    }
 }
 ```
 
@@ -156,7 +156,7 @@ super(message);
 
 ```java
 try {
-stack.pop();
+    stack.pop();
 } catch (EmptyStackException e) {}
 ```
 
@@ -164,7 +164,7 @@ stack.pop();
 
 ```java
 if (!stack.isEmpty()) {
-stack.pop();
+    stack.pop();
 }
 ```
 
