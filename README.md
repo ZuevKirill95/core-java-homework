@@ -13,3 +13,9 @@
 4. Исключения
     * [Домашнее задание](Exceptions/homework.md)
     * [Конспект](Exceptions/conspects.md)
+5. Коллекции (Часть 1)
+   * [Домашнее задание](Collections%201/homework.md)
+6. Коллекции (Часть 2)
+   * [Домашнее задание](Collections%202/homework.md)
+7. Generics (Обобщения)
+   * [Конспект](Generics/conspect.md)
