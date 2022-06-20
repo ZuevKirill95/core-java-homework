@@ -1,8 +1,10 @@
 # Создание проекта в GitHub 
 
-### 1) Зарегистрируйтесь в GitHub - https://github.com/
+### 1) Скачать Git - https://git-scm.com/downloads
 
-### 2) Создайте репозиторий, в котором будет хранится ваш код.
+### 2) Зарегистрируйтесь в GitHub - https://github.com/
+
+### 3) Создайте репозиторий, в котором будет хранится ваш код.
 
 ![img_3.png](img/new-repository.png)
 
@@ -10,11 +12,11 @@
 
 ![img_4.png](img/create-repository.png)
 
-### 3)	Скопируйте ссылку на репозиторий
+### 4)	Скопируйте ссылку на репозиторий
 
 ![img_5.png](img/copy_link.png)
 
-### 4) Склонируйте в IntelliJ IDEA
+### 5) Склонируйте в IntelliJ IDEA
 Git ⇒ Clone...
 
     Если нет кнопки Сlone, то выберите VCS ⇒ Enable Version Control Integration…
@@ -23,17 +25,17 @@ Git ⇒ Clone...
 
 ![img_7.png](img/clone2.png)
 
-### 5) Создайте модуль base-syntax
+### 6) Создайте модуль base-syntax
 
 ![img_8.png](img/create-module1.png)
 
 ![img_11.png](img/create-module2.png)
 
-### 6) Создайтие пакет `ru.sber.base.syntax` и в этом пакете выполните задания.
+### 7) Создайтие пакет `ru.sber.base.syntax` и в этом пакете выполните задания.
 
 ![img_12.png](img/create-package.png)
 
-### 7)	Выберите созданные/измененные файлы и нажмите Commit and Push
+### 8)	Выберите созданные/измененные файлы и нажмите Commit and Push
 
 ![img_13.png](img/commit.png)
 
@@ -41,4 +43,4 @@ Git ⇒ Clone...
 
 ![img_15.png](img/ready.png)
 
-### 8) Скиньте ссылку на репоизторий для проверки домашнего задания.
+### 9) Скиньте ссылку на репозиторий для проверки домашнего задания.
