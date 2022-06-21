@@ -104,6 +104,67 @@ public class Person {
 }
 ```
 
+## Виды конструкторов
+
+### Конструктор по умолчанию
+
+Если явно не задавать конструкторы, то неявно будет создан конструктор по умолчанию без параметров.
+
+### Конструктор без параметров
+
+```java
+class Person {
+    Person() {
+        // Пустая реализация
+    }
+}
+```
+
+### Конструктор с параметров 
+
+```java
+class Person {
+    String name;
+    int age;
+    
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+### Копирующий конструктор 
+
+```java
+class Person {
+    String name;
+    int age;
+    
+    Person(Person person) {
+        this.name = person.name;
+        this.age = person.age;
+    }
+}
+```
+
+## Перечисления (Enum)
+
+Перечисления представляют набор логически связанных констант. 
+Объявление перечисления происходит с помощью оператора **enum**, после которого идет название перечисления. Затем идет список элементов перечисления через запятую
+
+```java
+enum WeekDay {
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY
+}
+```
+
 ## Блоки кода
 
 ```java
