@@ -27,4 +27,4 @@ public class BankOnline {
 Создайте свои классы исключений. Все исключения должны быть **проверяемыми** и наследоваться от общего класса
 исключения BankOnlineException. Пример:
 
-![img.png](img/img.png)
+![img.png](img/bankExceptionHierarchy.png)

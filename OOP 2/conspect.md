@@ -107,6 +107,62 @@ class LoggerOne implements Logger {
 * Для наследования от класса используем: **extends**.
 * Для реализации интерфейса используем: **implements**.
 
+## Переопределение метода
+
+**Переопределение метода** (англ. Method overriding) - позволяет подклассу или дочернему классу обеспечивать 
+специфическую реализацию метода, уже реализованного в одном из суперклассов или родительских классов.
+
+```java
+public class Animal {
+    public void voice() {
+        System.out.println("Голос!");
+    }
+}
+```
+
+Переопределение методов
+
+```java
+public class Cat extends Animal {
+
+    @Override
+    public void voice() {
+        System.out.println("Мяу!");
+    }
+}
+
+public class Dog extends Animal {
+
+    @Override
+    public void voice() {
+        System.out.println("Гав!");
+    }
+}
+```
+
+## Перегрузка метода
+
+В программе мы можем использовать методы с одним и тем же именем, 
+но с разными типами и/или количеством параметров. Такой механизм называется 
+**перегрузкой методов (method overloading)**.
+
+```java
+public class Calculator {
+    /**
+     * Перегруженный метод с двумя параметрами типа int.
+     */
+    void calculate(int number1, int number2) { }
+    /**
+     * Перегруженный метод с тремя параметрами типа int.
+     */
+    void calculate(int number1, int number2, int number3) { }
+    /**
+     * Перегруженный метод с двумя параметрами типа double.
+     */
+    void calculate(double number1, double number2) { }
+}
+```
+
 ## Запомним:
 
 Java нет множественного наследования, наследоваться можно только от одного класса!
