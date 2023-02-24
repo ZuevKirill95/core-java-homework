@@ -13,11 +13,12 @@
     * [Конспект](OOP%202/conspect.md)
 4. Коллекции (Часть 1)
     * [Домашнее задание](Collections%201/homework.md)
+    * [Конспект](Collections%201/conspect.md)
 5. Коллекции (Часть 2)
     * [Домашнее задание](Collections%202/homework.md)
 6. Generics (Обобщения)
-    * [Конспект](Generics/conspect.md)
     * [Домашнее задание](Generics/homework.md)
+    * [Конспект](Generics/conspect.md)
 7. Набор инструментов
     * [Домашнее задание](Toolchain/homework.md)
     * [Конспект](Toolchain/conspect.md)
