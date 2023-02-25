@@ -126,6 +126,40 @@ class Main {
 
 Интерфейс `Deque` реализуется классами `LinkedList` и `ArrayDeque`.
 
+## Класс `Collections`
+
+`Collections` - вспомогательный класс для работы с коллекциями.
+
+Примеры методов
+
+```java
+public class CollectionsExample {
+  public static void main(String[] args) {
+    List<Integer> integers = new ArrayList<>(List.of(3, 2, 1));
+
+    // Возвращает пустой неизменяемый список.
+    List<Object> emptyList = Collections.emptyList();
+
+    // Сортирует указанный список.
+    Collections.sort(integers);
+
+    // Ищет элемент с помощью алгоритма "Двоичный поиск".
+    int i = Collections.binarySearch(integers, 2);
+
+    // Ищет максимальный элемент в списке.
+    Integer max = Collections.max(integers);
+
+    // Ищет минимальный элемент в списке.
+    Integer min = Collections.min(integers);
+
+    // Перемещает элементы в списке в обратном порядке.
+    Collections.reverse(integers);
+    
+    // И много других
+  }
+}
+```
+
 ## Метод `equals()`
 
 Пример:
