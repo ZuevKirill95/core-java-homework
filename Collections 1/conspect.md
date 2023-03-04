@@ -44,7 +44,7 @@
 
 ## Иерархия интерфейса Collections
 
-![Иерархия интерфейса Collections.jpg](../../java-lessons/Collections1/src/ru/sber/collections1/image/collections.jpg)
+![Иерархия интерфейса Collections.jpg](./img/collections.jpg)
 
 **Iterable** - реализация этого интерфейса позволяет объекту быть целью расширенного for оператора (иногда называемого
 for-each оператором).
