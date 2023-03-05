@@ -16,6 +16,7 @@
     * [Конспект](Collections%201/conspect.md)
 5. Коллекции (Часть 2)
     * [Домашнее задание](Collections%202/homework.md)
+    * [Конспект](Collections%202/conspect.md)
 6. Generics (Обобщения)
     * [Домашнее задание](Generics/homework.md)
     * [Конспект](Generics/conspect.md)
