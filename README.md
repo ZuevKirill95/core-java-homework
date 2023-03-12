@@ -20,12 +20,15 @@
 6. Generics (Обобщения)
     * [Домашнее задание](Generics/homework.md)
     * [Конспект](Generics/conspect.md)
-7. Набор инструментов
+7. Строки, дата и время
+   * [Домашнее задание](String-date-time/homework.md)
+   * [Конспект](String-date-time/conspect.md)
+8. Набор инструментов
     * [Домашнее задание](Toolchain/homework.md)
     * [Конспект](Toolchain/conspect.md)
-8. Исключения
+9. Исключения
     * [Домашнее задание](Exceptions/homework.md)
     * [Конспект](Exceptions/conspect.md)
-9. Потоки ввода вывода (Java I/O)
-    * [Домашнее задание](JavaIO/homework.md)
-    * [Конспект](JavaIO/conspect.md)
+10. Потоки ввода вывода (Java I/O)
+     * [Домашнее задание](JavaIO/homework.md)
+     * [Конспект](JavaIO/conspect.md)
