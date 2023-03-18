@@ -1,5 +1,28 @@
 # Строки, дата и время
 
+## Содержание
+
++ [Строка](#Строка)
++ [Многострочное создание строки](#Многострочное-создание-строки)
++ [Создание строк по другим данным](#Создание-строк-по-другим-данным)
+    + [Примитивные типы](#Примитивные-типы)
+    + [Объекты](#Объекты)
++ [Сравнение строк](#Сравнение-строк)
++ [Форматированный текст](#Форматированный-текст)
++ [Другие полезные методы](#Другие-полезные-методы)
++ [StringBuffer и StringBuilder](#StringBuffer-и-StringBuilder)
++ [Регулярные выражения](#Регулярные-выражения)
++ [API регулярных выражений](#API-регулярных-выражений)
+  + [Класс Pattern](#Класс-Pattern)
+  + [Класс Matcher](#Класс-Matcher)
++ [Дата и время](#Дата-и-время)
+  + [Класс LocalDate](#Класс-LocalDate)
+  + [Класс LocalTime](#Класс-LocalTime)
+  + [Класс LocalDateTime](#Класс-LocalDateTime)
+  + [Разбор и форматирование даты и времени](#Разбор-и-форматирование-даты-и-времени)
+  + [Класс Instant](#Класс-Instant)
+  + [До java 8](#До-java-8)
+
 ## Строка
 
 Объект `String` инкапсулирует последовательность символов `Unicode*`.
@@ -116,37 +139,6 @@ class Main {
 }
 ```
 
-## Другие полезные методы
-
-Со всеми методами можно ознакомится в
-[документации](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
-
-```java
-class Main {
-    public static void main(String[] args) {
-        String url = "https://online.sberbank.ru";
-        url.startsWith("https:"); // true
-        url.endsWith("ru"); // true
-        url.contains("sberbank"); // true
-        url.indexOf("online"); // 8
-        url.charAt(8); // 'o'
-
-        String emptyString = "    ";
-        emptyString.isEmpty(); // false. Возвращает true, если строка имеет нулевую длину
-        emptyString.isBlank(); // true. Возвращает true, если строка имеет нулевую длину или содержит только пробелы
-
-        String username = "   user_123   ";
-        username.trim(); // "user_123"
-
-        String attention = "внимание";
-        attention.toUpperCase(); // "ВНИМАНИЕ"
-
-        String java = "JAVA";
-        attention.toLowerCase(); // "java"
-    }
-}
-```
-
 ## Форматированный текст
 
 `static String format(String format, Object... args)` - Возвращает форматированную строку,
@@ -189,6 +181,75 @@ public class Main {
 | %c          | char                              |
 | %t          | Date                              |
 | %%          | Символ %                          |
+
+## Другие полезные методы
+
+Со всеми методами можно ознакомится в
+[документации](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
+
+```java
+class Main {
+    public static void main(String[] args) {
+        String url = "https://online.sberbank.ru";
+        url.startsWith("https:"); // true
+        url.endsWith("ru"); // true
+        url.contains("sberbank"); // true
+        url.indexOf("online"); // 8
+        url.charAt(8); // 'o'
+
+        String emptyString = "    ";
+        emptyString.isEmpty(); // false. Возвращает true, если строка имеет нулевую длину
+        emptyString.isBlank(); // true. Возвращает true, если строка имеет нулевую длину или содержит только пробелы
+
+        String username = "   user_123   ";
+        username.trim(); // "user_123"
+
+        String attention = "внимание";
+        attention.toUpperCase(); // "ВНИМАНИЕ"
+
+        String java = "JAVA";
+        attention.toLowerCase(); // "java"
+    }
+}
+```
+
+## `StringBuffer` и `StringBuilder`
+
+`StringBuffer` и `StringBuilder` создают объекты, содержащие изменяемую последовательность символов.
+Как это работает, и как это сравнивается с неизменяемым строковым классом:
+
+```java
+class Main {
+    public static void main(String[] args) {
+        String immutable = "abc";
+        immutable = immutable + "def"; //abcdef
+    }
+}
+```
+
+Даже если может показаться, что мы модифицируем один и тот же объект, добавляя “def”, мы создаем новый, потому что
+экземпляры String неизменяемы.
+
+При использовании либо StringBuffer, либо StringBuilder мы можем использовать метод `append()`
+
+```java
+class Main {
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("abc");
+        sb.append("def"); //abcdef
+    }
+}
+```
+
+В этом случае не было создано нового объекта. Мы вызвали метод `append()` для экземпляра `sb` и изменили его содержимое.
+`StringBuffer` и `StringBuilder` являются изменяемыми объектами.
+
+`SpringBuffer` - Потокобезопасная, изменяемая последовательность символов.
+
+`StringBuilder` - Предоставляет API, совместимый с `StringBuffer`, но без гарантии синхронизации.
+
+`StringBuffer` и `StringBuilder` — изменяемый классы, поэтому при работе с ним не возникает такого же количества мусора
+в памяти, как со `String`. Поэтому если над строками проводится много модификаций, лучше использовать их.
 
 ## Регулярные выражения
 
