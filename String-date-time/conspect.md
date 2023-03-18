@@ -26,9 +26,9 @@ class Main {
 class Main {
     public static void main(String[] args) {
         String borodino =
-                "— Скажи-ка, дядя, ведь недаром\n" +
-                        "Москва, спаленная пожаром,\n" +
-                        "Французу отдана?\n";
+                "— Скажи-ка, дядя, ведь недаром\n"
+                        + "Москва, спаленная пожаром,\n"
+                        + "Французу отдана?\n";
     }
 }
 ```
@@ -146,6 +146,49 @@ class Main {
     }
 }
 ```
+
+## Форматированный текст
+
+`static String format(String format, Object... args)` - Возвращает форматированную строку,
+использующую указанную строку формата и аргументы.
+
+Пример:
+
+```java
+public class Human {
+    private String name;
+    private int age;
+    private double weight;
+    private double height;
+
+    // Конструктор, сеттеры, геттеры.
+
+    @Override
+    public String toString() {
+        return String.format("Человек: {Имя: %s, Возраст: %d, Вес: %3.2f, Рост: %3.2f}",
+                name, age, weight, height);
+    }
+}
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Human human = new Human("Николай", 21, 75.321, 170.5012);
+        human.toString(); // Человек: {Имя: Николай, Возраст: 21, Вес: 75,32, Рост: 170,50}
+    }
+}
+```
+
+| Обозначение | Тип                               |
+|-------------|-----------------------------------|
+| %s          | String                            |
+| %d          | целое число: int, long, …         |
+| %f          | вещественное число: float, double |
+| %b          | boolean                           |
+| %c          | char                              |
+| %t          | Date                              |
+| %%          | Символ %                          |
 
 ## Регулярные выражения
 
